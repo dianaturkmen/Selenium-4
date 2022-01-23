@@ -63,6 +63,7 @@ import java.time.Duration;
             // variable olusturmadan direk locate edip, istedigimiz islemi yapabiliriz
 
             driver.findElement(By.className("s-image")).click();
+            driver.close();
 
         }
 

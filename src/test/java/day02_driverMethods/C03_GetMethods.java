@@ -6,9 +6,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
     public class C03_GetMethods {
 
-        //1. Yeni bir package olusturalim : day01
+        //1. Yeni bir package olusturalim : day02
 
-        //2. Yeni bir class olusturalim : C01_GetMethods
+        //2. Yeni bir class olusturalim : C03_GetMethods
 
         public static void main(String[] args) {
 

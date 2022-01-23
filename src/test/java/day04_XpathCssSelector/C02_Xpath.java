@@ -20,35 +20,29 @@ public class C02_Xpath {
         driver.navigate().to("https://the-internet.herokuapp.com/add_remove_elements/");
 
         //2- Add Element butonuna basin
-
         driver.findElement(By.xpath("//button[@onclick='addElement()']")).click();
 
         //3- Delete butonu’nun gorunur oldugunu test edin
-
-        WebElement deleteButtonu = driver.findElement(By.xpath("//button[@class='added-manually']"));
-
-        if (deleteButtonu.isDisplayed()) {
-
-            System.out.println("delet butonu gorunuyor testi PASS");
-
-        }else System.out.println("delet butonu gorunuyor testi FAİLDE");
+        WebElement deleteButonu=driver.findElement(By.xpath("//button[@class='added-manually']"));
+        if(deleteButonu.isDisplayed()){
+            System.out.println("delete butonu gorunuyor testi PASS");
+        }else {
+            System.out.println("delete butonu gorunuyor testi FAILED");
+        }
 
         //4- Delete tusuna basin
-
-        deleteButtonu.click();
+        deleteButonu.click();
 
         //5- “Add/Remove Elements” yazisinin gorunur oldugunu test edin
-
-        WebElement addYazisiElementi = driver.findElement(By.xpath("//h3"));
-
-        WebElement addYazisiElementi2 = driver.findElement(By.tagName("h3"));
-
-        if (addYazisiElementi.isDisplayed()) {
-
-            System.out.println("add yazisi  gorunuyor testi PASS");
-
-        }else System.out.println("add yazisi gorunuyor testi FAİLDE");
-
+        WebElement addRemoveYzisiElementi=driver.findElement(By.xpath("//h3"));
+        WebElement addRemoveYzisiElementi2=driver.findElement(By.tagName("h3"));
+        if (addRemoveYzisiElementi.isDisplayed()){
+            System.out.println("Add yazisi gorunuyor testi PASSED");
+        }else{
+            System.out.println("Add yazisi gorunuyor testi FAILED");
+        }
         driver.close();
-}
+
+
+    }
 }

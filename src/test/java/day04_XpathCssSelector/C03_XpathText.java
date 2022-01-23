@@ -7,7 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.time.Duration;
 
-public class C03_Xpath {
+public class C03_XpathText {
     //Asagidaki testi text’leri kullanarak locate edin
     //
     //1- https://the-internet.herokuapp.com/add_remove_elements/ adresine gidin
@@ -42,7 +42,7 @@ public class C03_Xpath {
 
             System.out.println("delet butonu gorunuyor testi PASS");
 
-        }else System.out.println("delet butonu gorunuyor testi FAİLDE");
+        }else System.out.println("delet butonu gorunuyor testi FAILED");
 
         //4- Delete tusuna basin
 
@@ -58,7 +58,7 @@ public class C03_Xpath {
 
             System.out.println("add yazisi  gorunuyor testi PASS");
 
-        }else System.out.println("add yazisi gorunuyor testi FAİLDE");
+        }else System.out.println("add yazisi gorunuyor testi FAILED");
 
         driver.close();
     }

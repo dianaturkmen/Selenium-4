@@ -13,6 +13,12 @@ public class C08_ImplicitlyWait {
 
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
+        // implicitly wait testimiz boyunca sayfa acilmasi ve element bulunmasi konusunda driver'in
+        // bekleyecegi maximum sureyi belirler.
+        // Bu sure icerisinde gorevini bitirir bitirmez, bir sonraki adima gecer
+        // Bu sure icerisinde gorevini bitiremezse o zaman hata verir
+
+        // belirlenen maximum sure Thread.sleep'deki gibi mutlak bekleme suresi degildir
 
         driver.get("https://techproeducation.com");
 

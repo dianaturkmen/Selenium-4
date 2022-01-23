@@ -19,13 +19,8 @@ public class C01_TekrarTesti {
         //4-Sayfayi “refresh” yapin
         driver.navigate().refresh();
         //5- Sayfa basliginin “Spend less” ifadesi icerdigini test edin
-        String actualTitle= driver.getTitle();
+        String actualTitle=driver.getTitle();
         String titleArananKelime="Spend less";
-        if (actualTitle.contains(titleArananKelime)){
-            System.out.println("Title testi PASSED");
-        }else {
-            System.out.println("Title testi FAILED \nActual title : " + actualTitle);
-        }
         //6- Gift Cards sekmesine basin
         driver.findElement(By.xpath("//a[text()='Gift Cards']")).click();
         //7- Birthday butonuna basin
@@ -36,15 +31,16 @@ public class C01_TekrarTesti {
         driver.findElement(By.xpath("//button[@value='25.00']")).click();
         //10-Urun ucretinin 25$ oldugunu test edin
         WebElement fiyatElementi=driver.findElement(By.xpath("//span[@class='a-color-price a-text-bold']"));
-        String expectedFiyat="$25.00";
+        String expextedFiyat="$25.00";
         String actualFiyat=fiyatElementi.getText();
-        if (expectedFiyat.equals(actualFiyat)){
-            System.out.println("Fiyat testi PASSED");
-        }else {
-            System.out.println("Fiyat testi FAILED");
-        }
-        //10-Sayfayi kapatin
 
-        driver.close();
+        if(expextedFiyat.equals(actualFiyat)){
+            System.out.println("Fiyat Testi PASSED");
+        }else{
+            System.out.println("Fiyat Testi FAILED");
+
+        }
+        //11-Sayfayi kapatin
+        //driver.close();
     }
 }

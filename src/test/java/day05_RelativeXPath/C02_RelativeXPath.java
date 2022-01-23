@@ -35,7 +35,7 @@ public class C02_RelativeXPath {
 
         // 2 ) Berlin’i  3 farkli relative locator ile locate edin
 
-        WebElement berlin1=driver.findElement(RelativeLocator.with(By.tagName("img")).above(sailor).toLeftOf(byArea));
+        WebElement berlin1=driver.findElement(RelativeLocator.with(By.tagName("img")).above(sailor));
 
         WebElement berlin2=driver.findElement(RelativeLocator.with(By.tagName("img")).toRightOf(boston).toLeftOf(byArea));
 

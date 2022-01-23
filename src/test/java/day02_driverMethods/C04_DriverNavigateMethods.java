@@ -14,8 +14,5 @@ public class C04_DriverNavigateMethods {
         driver.navigate().forward();
         driver.navigate().refresh();
 
-
-
-
     }
 }
